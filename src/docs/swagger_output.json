@@ -73,18 +73,16 @@
           }
         },
         "requestBody": {
+          "required": true,
           "content": {
             "application/json": {
               "schema": {
-                "type": "object",
-                "properties": {
-                  "required": {
-                    "example": "any"
-                  },
-                  "schema": {
-                    "example": "any"
-                  }
-                }
+                "$ref": "#/components/schemas/LoginRequest"
+              }
+            },
+            "application/xml": {
+              "schema": {
+                "$ref": "#/components/schemas/LoginRequest"
               }
             }
           }
@@ -135,6 +133,9 @@
             "type": "string",
             "example": "password"
           }
+        },
+        "xml": {
+          "name": "LoginRequest"
         }
       }
     }

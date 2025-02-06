@@ -66,7 +66,7 @@ export default {
 
     async login(req: Request, res: Response) {
         /** 
-            #swagger.reuestBody = {
+            #swagger.requestBody = {
                 required: true,
                 schema: {$ref: "#/components/schemas/LoginRequest"}
             }
