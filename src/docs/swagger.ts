@@ -23,19 +23,15 @@ const doc = {
             bearerAuth: {
                 type: "http",
                 scheme: "bearer",
-                bearerFormat: "JWT",
             },
         },
         schemas: {
             LoginRequest: {
-                password: "12341234",
+                identifier: "mumei2",
+                password: "password",
             }
         }
     },
-
-    security: [{ bearerAuth: [] }],
-    tags: [{ name: "Users", description: "Operations related to users" }],
-    paths: {},
 }
 
 const outputFile = "./swagger_output.json";

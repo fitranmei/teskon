@@ -15,12 +15,6 @@
       "description": "Production server"
     }
   ],
-  "tags": [
-    {
-      "name": "Users",
-      "description": "Operations related to users"
-    }
-  ],
   "paths": {
     "/auth/register": {
       "post": {
@@ -126,25 +120,23 @@
     "securitySchemes": {
       "bearerAuth": {
         "type": "http",
-        "scheme": "bearer",
-        "bearerFormat": "JWT"
+        "scheme": "bearer"
       }
     },
     "schemas": {
       "LoginRequest": {
         "type": "object",
         "properties": {
+          "identifier": {
+            "type": "string",
+            "example": "mumei2"
+          },
           "password": {
             "type": "string",
-            "example": "12341234"
+            "example": "password"
           }
         }
       }
     }
-  },
-  "security": [
-    {
-      "bearerAuth": []
-    }
-  ]
+  }
 }
