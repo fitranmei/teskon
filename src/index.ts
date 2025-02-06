@@ -3,6 +3,8 @@ import bodyParser from "body-parser";
 import router from './routes/api';
 import authController from './controllers/auth.controller';
 import db from "./utils/database";
+import docs from './docs/route';
+import cors from "cors";
 
 
 async function init() {
@@ -12,6 +14,7 @@ async function init() {
 
         const app = express();
 
+        app.use(cors());
         app.use(bodyParser.json());
 
         app.get('/', (req, res) => {
@@ -21,6 +24,7 @@ async function init() {
             });
         });
         app.use('/api', router);
+        docs(app);
 
         const port = 3000;
         app.listen(port, () => {
