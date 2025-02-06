@@ -13,6 +13,13 @@ async function init() {
         const app = express();
 
         app.use(bodyParser.json());
+
+        app.get('/', (req, res) => {
+            res.status(200).json({
+                message: "Hello, World!",
+                data: null
+            });
+        });
         app.use('/api', router);
 
         const port = 3000;
