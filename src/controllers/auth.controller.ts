@@ -49,7 +49,7 @@ export default {
                 username,
                 email,
                 password
-            })
+            });
 
             res.status(200).json({
                 message: "Registration successful!",
