@@ -3,7 +3,7 @@ import bodyParser from "body-parser";
 import router from './routes/api';
 import db from "./utils/database";
 import docs from './docs/route';
-import cors from "cors";
+import cors from 'cors';
 
 async function init() {
     try {
@@ -13,11 +13,11 @@ async function init() {
         const app = express();
 
         app.use(cors(
-            {
-                origin: '*',
-                methods: ['GET', 'POST', 'PUT', 'DELETE'],
-                allowedHeaders: ['Content-Type', 'Authorization'],
-            }
+            // {
+            //     origin: '*',
+            //     methods: ['GET', 'POST', 'PUT', 'DELETE'],
+            //     allowedHeaders: ['Content-Type', 'Authorization'],
+            // }
         ));
         app.use(bodyParser.json());
 
