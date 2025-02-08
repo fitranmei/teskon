@@ -13,7 +13,7 @@ const doc = {
             description: "Development server"
         },
         {
-            url: "http://teskon.vercel.app/api",
+            url: "https://teskon.vercel.app/api",
             description: "Production server"
         }
     ],

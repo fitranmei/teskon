@@ -5,7 +5,6 @@ import fs from "fs";
 import path from "path";
 
 export default function docs(app: Express) {
-
     const css = fs.readFileSync(
         path.resolve(
             __dirname, 
