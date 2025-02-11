@@ -29,6 +29,16 @@ const doc = {
             LoginRequest: {
                 identifier: "mumei2",
                 password: "password",
+            },
+            RegisterRequest: {
+                fullName: "Jamalu",
+                username: "jamalll",
+                email: "jamal@yopmail.com",
+                password: "password",
+                confirmPassword: "password",
+            },
+            ActivationRequest: {
+                code: "abcde"
             }
         }
     },
